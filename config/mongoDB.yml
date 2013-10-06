@@ -1,0 +1,24 @@
+Default: &defaults
+  user: sr5hs
+  password: sr5hs
+  host: localhost
+  database: sr5hs
+  connections: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: sr5hs_test
+  <<: *defaults
+
+Staging:
+  database: sr5hs_staging
+  connections: 100
+  <<: *defaults
+
+Production:
+  database: sr5hs_production
+  connections: 100
+  host: localhost
+  <<: *defaults
